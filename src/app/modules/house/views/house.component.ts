@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Characters, House } from '../../../models/Characters.interface';
 import { HogwartsService } from '../../../services/hogwarts.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-house',
@@ -12,6 +13,7 @@ export class HouseComponent implements OnInit {
   selectedHouse: string = '';
   characters: Characters[] = [];
   constructor(private _hogwartsService: HogwartsService ) {}
+  myValueSub!: Subscription;
 
   ngOnInit(): void {
   }
@@ -20,7 +22,7 @@ export class HouseComponent implements OnInit {
   choose() {
     
     if (this.selectedHouse !== ''){
-      this._hogwartsService.getCharactersListByHouse(this.selectedHouse).subscribe({
+      this.myValueSub = this._hogwartsService.getCharactersListByHouse(this.selectedHouse).subscribe({
         next: (data: Characters[]) => {
           
           this.characters = data;
@@ -31,5 +33,11 @@ export class HouseComponent implements OnInit {
       });
     }
 
+  }
+
+  ngOnDestroy() {
+    if (this.myValueSub) {
+      this.myValueSub.unsubscribe();
+    }
   }
 }

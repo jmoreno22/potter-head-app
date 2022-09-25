@@ -1,5 +1,7 @@
 <div class="container">
-
+    <div class="container center title-container">
+        <span class="hp-font fs-1"> Houses </span>
+    </div>
     <section class="radio-button-section">
         <label class="radio-button-margin hp-font">Select house:</label>
         <mat-radio-group  [(ngModel)]="selectedHouse" (ngModelChange)="choose()">
@@ -13,9 +15,9 @@
         <app-characters-table [characters]="characters"></app-characters-table>
     </ng-container>
     <ng-template #elseTemplate>
-        <div class="container">
+        <div class="container center">
             
-            <h2 class="hp-font">Seleccione una casa</h2>
+            <h2 class="hp-font">Select a House</h2>
         </div>
     </ng-template>
     
