@@ -1,0 +1,22 @@
+<div class="container">
+
+    <section class="radio-button-section">
+        <label class="radio-button-margin hp-font">Select house:</label>
+        <mat-radio-group  [(ngModel)]="selectedHouse" (ngModelChange)="choose()">
+          <mat-radio-button class="radio-button-margin hp-font" value="gryffindor">Gryffindor</mat-radio-button>
+          <mat-radio-button class="radio-button-margin hp-font" value="slytherin ">Slytherin</mat-radio-button>
+          <mat-radio-button class="radio-button-margin hp-font" value="hufflepuff">Hufflepuff</mat-radio-button>
+          <mat-radio-button class="radio-button-margin hp-font" value="ravenclaw">Ravenclaw</mat-radio-button>
+        </mat-radio-group>
+    </section>
+    <ng-container *ngIf="characters.length > 0; else elseTemplate">
+        <app-characters-table [characters]="characters"></app-characters-table>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <div class="container">
+            
+            <h2 class="hp-font">Seleccione una casa</h2>
+        </div>
+    </ng-template>
+    
+</div>

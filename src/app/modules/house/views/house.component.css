@@ -1,0 +1,14 @@
+.radio-button-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .radio-button-margin {
+    margin: 0 10px;
+  }
+
+  .hp-font {
+    font-family: 'Harry Potter', sans-serif;
+  }
