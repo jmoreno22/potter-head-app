@@ -12,6 +12,16 @@ th {
   width: 20%;
 }
 
+.font {
+  font-family: "Crimson Text", Georgia;
+  color: black;
+  font-size: 1rem;
+}
+
+a {
+  cursor: url("../../../assets/img/pointer.cur"), auto;
+}
+
 th {
   background-color: black;
   font-family: "Harry Potter", sans-serif;
@@ -45,4 +55,18 @@ tr.mat-row {
 .hp-font {
   font-family: "Harry Potter", sans-serif;
   font-size: 18px;
+}
+
+::ng-deep .mat-form-field .mat-form-field-underline {
+  background-color: white;
+}
+::ng-deep .mat-form-field .mat-form-field-ripple {
+  background-color: #EEBA30;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: white;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #ff884d;
 }

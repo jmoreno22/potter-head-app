@@ -1,5 +1,14 @@
-<div class="container">
-    <ng-container *ngIf="characters.length > 0">
-        <app-characters-table [characters]="characters"></app-characters-table>
-    </ng-container>
+<div class="container-fluid bg">
+    <img
+      class="img-title"
+      src="https://deasil.works/sites/dw/files/thumbnails/image/img_project_logo_hp_0.png"
+      width="60%;"
+      alt=""
+    />
+    <h1 class="text-white">Students of Hogwarts</h1>
+    <div class="container">
+        <ng-container *ngIf="characters.length > 0">
+            <app-characters-table [characters]="characters"></app-characters-table>
+        </ng-container>
+    </div>
 </div>

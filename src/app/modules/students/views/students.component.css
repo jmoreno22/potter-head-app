@@ -1,0 +1,22 @@
+.bg {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-image: url("../../../../assets/img/background.jpg");
+  background-size: cover;
+}
+
+.img-title {
+  display: block;
+  margin: auto;
+  padding-top: 0%;
+}
+
+h1 {
+  font-variant: small-caps;
+  font-size: 48px;
+  margin-top: -5px;
+  text-align: center;
+  font-family: "Crimson Text", Georgia;
+}

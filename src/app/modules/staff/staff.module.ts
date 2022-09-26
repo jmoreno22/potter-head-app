@@ -12,7 +12,7 @@ import { CharactersTableModule } from '../../components/characters-table/charact
   ],
   imports: [
     CommonModule,
-    CharactersTableModule
+    CharactersTableModule,
   ]
 })
 export class StaffModule { }

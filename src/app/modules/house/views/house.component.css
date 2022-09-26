@@ -22,10 +22,6 @@
   font-family: "Harry Potter", sans-serif;
 }
 
-.center {
-  text-align: center;
-}
-
 .title-container {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -38,7 +34,7 @@ button img {
 .img-title {
   display: block;
   margin: auto;
-  padding-top: 4%;
+  padding-top: 0%;
 }
 
 h1 {
@@ -46,6 +42,7 @@ h1 {
   font-size: 48px;
   margin-top: -5px;
   text-align: center;
+  font-family: "Crimson Text", Georgia;
 }
 
 :host ::ng-deep .mat-radio-outer-circle {
