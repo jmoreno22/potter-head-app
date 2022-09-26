@@ -1,194 +1,161 @@
-@import url('http://fonts.cdnfonts.com/css/harry-potter');
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 7rem;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    padding-top: 10px;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
-
-  .center-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-  }
-
-  /* .card-size {
-    height: 500px;
-  
-  }
-
-  .title {
-    font-size: 3.5rem;
-    font-family: 'Harry Potter', sans-serif;
-  }
-
-  .center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 30vh;
-  }
-
-  @import url('https://fonts.googleapis.com/css?family=Asap+Condensed:600i,700'); */
-
-
-h1 {
-  font-size: 60px;
-}
-h3 {
-  font-size: 26px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.italic {
-  font-style: italic;
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-image: url("../../../../assets/img/background.jpg");
+  background-size: cover;
+}
+
+.main-container .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+.main-container .container .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(184, 134, 11, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(184, 134, 11, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+  background-color: #090915;
+  border-color: darkgoldenrod;
+  border-width: inherit;
+}
+
+.main-container .container .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+.main-container .container .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+.main-container .container .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+.main-container .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #090915;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.main-container .container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+.main-container .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.main-container .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.main-container .container .card .box .content h2 {
+  font-family: "Harry Potter", sans-serif;
+  position: absolute;
+  top: 50px;
+  right: 5px;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.main-container .container .card .box .content h3 {
+  font-size: 4.3rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+  padding-top: 40px;
+}
+
+.main-container .container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.main-container .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.main-container .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+.card-title {
+  font-family: "Harry Potter", sans-serif;
+}
+
+.card-picture img {
+  display: inline;
+  max-width: 100%;
+  height: auto;
+  filter: invert(100%) sepia(5%) saturate(21%) hue-rotate(207deg)
+    brightness(106%) contrast(107%);
+}
+
+.main-container .container .card:hover .box {
+  box-shadow: 0 1px 5px rgba(184, 134, 11, 0.6);
+}
+
+.main-container .container .card:hover .box .content .card-frame h3 {
+  color: #b8860b;
+}
+
+.main-container .container .card:hover img {
+  filter: invert(70%) sepia(35%) saturate(7489%) hue-rotate(15deg)
+    brightness(89%) contrast(91%);
 }
 
 .card {
-    position: relative;
-    margin: auto;
-    height: 350px;
-    width: 100%;
-    text-align: center;
-    background: linear-gradient(#E96874, #6E3663, #2B0830);
-    border-radius: 2px;
-    box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);
-    color: #fff;
-    padding: 30px;
-    font-family: 'Harry Potter', sans-serif;
-}
-
-#gryffindor-color {
-    background: linear-gradient( #740001, #AE0001, #D3A625, #EEBA30, #000000, #C0C0C0);
-}
-
-#slytherin-color {
-    background: linear-gradient( #1A472A, #2A623D, #5D5D5D, #AAAAAA, #000000);
-}
-
-.card header {
-  position: absolute;
-  top: 31px;
-  left: 0;
-  width: 100%;
-  padding: 0 10%;
-  transform: translateY(-50%);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-}
-
-.card header > *:first-child {
-  text-align: left;
-}
-.card header > *:last-child {
-  text-align: right;
-}
-
-.logo {
-  font-size: 24px;
-  position: relative;
-}
-.logo:before,
-.logo:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  border-top: 3px solid currentColor;
-  transform: translateY(-50%);
-}
-
-.logo:before {
-  right: 158px;
-  width: 40%;
-}
-.logo:after {
-  left: 158px;
-  width: 55%;
-}
-
-.logo span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: calc(50% - 1px);
-}
-
-.announcement {
-  position: relative;
-  border: 3px solid currentColor;
-  border-top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.announcement:before,
-.announcement:after {
-  content: '';
-  position: absolute;
-  top: 0px;
-  border-top: 3px solid currentColor;
-  height: 0;
-  width: 15px;
-}
-.announcement:before {
-  left: -3px;
-}
-.announcement:after {
-  right: -3px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-a,
-a:visited,
-a:focus,
-a:active,
-a:link {
-  text-decoration: none;
-  outline: 0;
-}
-
-a {
-  color: currentColor;
-  transition: .2s ease-in-out;
-}
-
-h1, h2, h3, h4 {
-  margin: .15em 0;
+  cursor: url("../../../../assets/img/pointer.cur"), auto;
 }

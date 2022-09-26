@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { HouseComponent } from './views/house.component';
 import { CharactersTableModule } from '../../components/characters-table/characters-table.module';
 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
-import { FormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -19,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     CharactersTableModule,
     MatCheckboxModule,
     MatRadioModule,
+    MatButtonModule,
   ]
 })
 export class HouseModule { }

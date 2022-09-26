@@ -1,26 +1,48 @@
 table {
-    width: 100%;
-  }
-  
-  .mat-form-field {
-    font-size: 18px;
-    width: 100%;
-  }
-  
-  td, th {
-    width: 17%;
-  }
+  width: 100%;
+}
 
-  .character-img {
-    height: 100%;
-    width: 200px;
-  }
+.mat-form-field {
+  font-size: 20px;
+  width: 100%;
+}
 
-  .mat-cell {
-   font-size: 18px;
-  }
+td,
+th {
+  width: 20%;
+}
 
-  .house-icon {
-    width: 32px;
-    height: 100%;
-  }
+th {
+  background-color: black;
+  font-family: "Harry Potter", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+td {
+  font-family: "Crimson Text", Georgia;
+}
+
+tr.mat-row {
+  margin-top: 5px;
+}
+
+.character-img {
+  height: 100%;
+  width: 100px;
+  border-radius: 8px;
+}
+
+.mat-cell {
+  font-size: 18px;
+}
+
+.house-icon {
+  width: 32px;
+  height: 100%;
+}
+
+.hp-font {
+  font-family: "Harry Potter", sans-serif;
+  font-size: 18px;
+}

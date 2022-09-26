@@ -1,24 +1,65 @@
-<div class="container">
-    <div class="container center title-container">
-        <span class="hp-font fs-1"> Houses </span>
+<div class="container-fluid bg">
+  <div class="container">
+    <img
+      class="img-title"
+      src="https://deasil.works/sites/dw/files/thumbnails/image/img_project_logo_hp_0.png"
+      width="60%;"
+      alt=""
+    />
+    <h1 class="text-white">Houses of Hogwarts</h1>
+    <div class="d-flex">
+      <div class="p-2 w-100">
+        <section class="radio-button-section">
+          <label class="radio-button-margin hp-font fs-3 text-white"
+            >Select a house:</label
+          >
+          <mat-radio-group
+            [(ngModel)]="selectedHouse"
+            (ngModelChange)="chooseHouse()"
+          >
+            <mat-radio-button
+              class="radio-button-margin hp-font text-white"
+              value="gryffindor"
+              ><img
+                class="house-icon"
+                src="../../../../assets/img/gryffindor.png"
+                alt=""
+              />
+            </mat-radio-button>
+            <mat-radio-button
+              class="radio-button-margin hp-font"
+              value="slytherin"
+              ><img
+                class="house-icon"
+                src="../../../../assets/img/slytherin.png"
+                alt=""
+            /></mat-radio-button>
+            <mat-radio-button
+              class="radio-button-margin hp-font"
+              value="hufflepuff"
+              ><img
+                class="house-icon"
+                src="../../../../assets/img/hufflepuff.png"
+                alt=""
+            /></mat-radio-button>
+            <mat-radio-button
+              class="radio-button-margin hp-font"
+              value="ravenclaw"
+              ><img
+                class="house-icon"
+                src="../../../../assets/img/ravenclaw.png"
+                alt=""
+            /></mat-radio-button>
+          </mat-radio-group>
+        </section>
+      </div>
+      <div class="p-2 flex-shrink-1"></div>
     </div>
-    <section class="radio-button-section">
-        <label class="radio-button-margin hp-font">Select house:</label>
-        <mat-radio-group  [(ngModel)]="selectedHouse" (ngModelChange)="choose()">
-          <mat-radio-button class="radio-button-margin hp-font" value="gryffindor">Gryffindor</mat-radio-button>
-          <mat-radio-button class="radio-button-margin hp-font" value="slytherin ">Slytherin</mat-radio-button>
-          <mat-radio-button class="radio-button-margin hp-font" value="hufflepuff">Hufflepuff</mat-radio-button>
-          <mat-radio-button class="radio-button-margin hp-font" value="ravenclaw">Ravenclaw</mat-radio-button>
-        </mat-radio-group>
-    </section>
     <ng-container *ngIf="characters.length > 0; else elseTemplate">
-        <app-characters-table [characters]="characters"></app-characters-table>
+      <app-characters-table [characters]="characters"></app-characters-table>
     </ng-container>
     <ng-template #elseTemplate>
-        <div class="container center">
-            
-            <h2 class="hp-font">Select a House</h2>
-        </div>
+      <div class="container center"></div>
     </ng-template>
-    
+  </div>
 </div>
